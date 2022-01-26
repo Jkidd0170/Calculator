@@ -12,3 +12,16 @@ let dis2Num = '';
 let result = null;
 let lastOperation = '';
 let haveDot = false;
+
+numbersE1.forEach(number => {
+    number.addEventListener('click', (e)=>{
+      if( e.target.innerText === '.' && !haveDot){
+          haveDot = true;
+      }else if(e.target.innerText === '.' && haveDot){
+          return;
+      }
+      dis2Num += e.target.innerText;
+      display2E1.innerText = dis2Num;  
+    })
+});
+
